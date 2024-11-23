@@ -1,5 +1,9 @@
 #pragma once
 
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <unistd.h>
+
 namespace Func2
 {
   class GetattrBase
@@ -10,7 +14,7 @@ namespace Func2
   public:
     virtual int process(const Branches &branches,
                         const fs::Path &fusepath,
-                        const mode_t mode,
-                        fuse_file_info_t *ffi) = 0;
+                        struct stat *st,
+                        fuse_timeouts_t *timeout) = 0;
   };
 }
