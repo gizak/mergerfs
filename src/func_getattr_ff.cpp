@@ -6,15 +6,20 @@ Func2::GetattrFF::process(const Branches  &branches_,
                           struct stat     *st_,
                           fuse_timeouts_t *timeout_)
 {
+  int rv;
   Branches::CPtr branches;
   fs::Path fullpath;
 
   branches = branches_;
   
-  for(const auto &branch : *branches)
+  for(const auto &branch : *branches
     {
       fullpath = branch.path;
       fullpath /= fusepath_;
+      rv = fs::lstat(fullpath.c_str(),st_);
+      if(rv == 0)
+        return 0;
+      
     }
 
   return 0;
