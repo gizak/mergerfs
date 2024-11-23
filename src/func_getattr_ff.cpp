@@ -6,7 +6,11 @@ Func2::GetattrFF::process(const Branches  &branches_,
                           struct stat     *st_,
                           fuse_timeouts_t *timeout_)
 {
-  for(const auto &branch : branches_)
+  Branches::CPtr branches;
+
+  branches = branches_;
+  
+  for(const auto &branch : *branches)
     {
       
     }
