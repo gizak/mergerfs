@@ -16,6 +16,8 @@
 
 #pragma once
 
+#include "func_getattr_ff.hpp"
+
 #include "branches.hpp"
 #include "category.hpp"
 #include "config_cachefiles.hpp"
