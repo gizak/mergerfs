@@ -19,7 +19,6 @@ Func2::GetattrFF::process(const Branches  &branches_,
       rv = fs::lstat(fullpath.c_str(),st_);
       if(rv == 0)
         return 0;
-      
     }
 
   return 0;
