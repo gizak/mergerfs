@@ -2,7 +2,7 @@
 
 namespace Func2
 {
-  class GetattrFF : final public GetattrBase
+  class GetattrFF : public GetattrBase final
   {
   public:
     GetattrFF() {}
