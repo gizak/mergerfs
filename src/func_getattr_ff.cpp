@@ -14,7 +14,7 @@ Func2::GetattrFF::process(const Branches  &branches_,
 
   branches = branches_;
   
-  for(const auto &branch : *branches
+  for(const auto &branch : *branches)
     {
       fullpath = branch.path;
       fullpath /= fusepath_;
