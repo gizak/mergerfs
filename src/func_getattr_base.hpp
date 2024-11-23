@@ -1,6 +1,7 @@
 #pragma once
 
 #include "fs_path.hpp"
+#include "branches.hpp"
 
 #include <sys/types.h>
 #include <sys/stat.h>
