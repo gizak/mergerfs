@@ -158,6 +158,8 @@ public:
   ConfigBOOL     writeback_cache;
   XAttr          xattr;
 
+  Func2::GetattrFF getattr;
+
 private:
   bool _initialized;
 
