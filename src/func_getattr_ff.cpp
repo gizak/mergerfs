@@ -1,5 +1,7 @@
 #include "func_getattr_ff.hpp"
 
+#include "fs_lstat.hpp"
+
 int
 Func2::GetattrFF::process(const Branches  &branches_,
                           const fs::Path  &fusepath_,
