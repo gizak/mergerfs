@@ -1,5 +1,7 @@
 #pragma once
 
+#include "fs_path.hpp"
+
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <unistd.h>
