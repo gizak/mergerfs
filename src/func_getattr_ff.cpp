@@ -6,5 +6,10 @@ Func2::GetattrFF::process(const Branches  &branches_,
                           struct stat     *st_,
                           fuse_timeouts_t *timeout_)
 {
-  return -ENOENT;
+  for(const auto &branch : *branches_)
+    {
+      
+    }
+
+  return 0;
 }
