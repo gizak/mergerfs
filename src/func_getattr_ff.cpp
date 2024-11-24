@@ -2,8 +2,6 @@
 
 #include "fs_lstat.hpp"
 
-#include "fmt.hpp"
-
 int
 Func2::GetattrFF::process(const Branches  &branches_,
                           const fs::Path  &fusepath_,
@@ -21,7 +19,7 @@ Func2::GetattrFF::process(const Branches  &branches_,
       fullpath = branch.path;
       fullpath /= fusepath_;
       rv = fs::lstat(fullpath.c_str(),st_);
-      fmt::print("{} {}\n",fullpath,rv);
+      printf("%s %d\n",fullpath,rv);
       if(rv == 0)
         return 0;
     }
