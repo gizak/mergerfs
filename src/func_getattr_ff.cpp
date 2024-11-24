@@ -19,6 +19,7 @@ Func2::GetattrFF::process(const Branches  &branches_,
       fullpath = branch.path;
       fullpath /= fusepath_;
       rv = fs::lstat(fullpath.c_str(),st_);
+      fmt::print("{} {}\n",fullpath,rv);
       if(rv == 0)
         return 0;
     }
