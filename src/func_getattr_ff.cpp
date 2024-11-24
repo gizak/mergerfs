@@ -2,6 +2,8 @@
 
 #include "fs_lstat.hpp"
 
+#include "fmt.hpp"
+
 int
 Func2::GetattrFF::process(const Branches  &branches_,
                           const fs::Path  &fusepath_,
