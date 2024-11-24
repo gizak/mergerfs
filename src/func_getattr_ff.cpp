@@ -24,5 +24,5 @@ Func2::GetattrFF::process(const Branches  &branches_,
         return 0;
     }
 
-  return 0;
+  return -ENOENT;
 }
