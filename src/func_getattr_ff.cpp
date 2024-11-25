@@ -22,14 +22,10 @@ Func2::GetattrFF::process(const Branches  &branches_,
       rv = fs::lstat(fullpath.c_str(),st_);
       if(rv == 0)
         {
-          timeout_->entry = cfg->cache_entry;
-          timeout_->attr  = cfg->cache_attr;          
           fs::inode::calc(fusepath_,st_);
           return 0;
         }
     }
 
-  timeout_->entry = cfg->cache_negative_entry;
-    
   return -ENOENT;
 }
