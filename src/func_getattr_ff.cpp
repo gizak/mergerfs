@@ -28,6 +28,7 @@ Func2::GetattrFF::process(const Branches  &branches_,
           return 0;
         }
     }
+
   timeout_->entry = cfg->cache_negative_entry;
     
   return -ENOENT;
