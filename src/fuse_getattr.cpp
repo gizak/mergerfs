@@ -158,7 +158,8 @@ namespace l
 
     rv = cfg->getattr.process(cfg->branches,
                               fusepath_,
-                              st_);
+                              st_,
+                              timeout_);
     
     // rv = l::getattr(cfg->func.getattr.policy,
     //                 cfg->branches,
