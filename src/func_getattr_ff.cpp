@@ -20,7 +20,10 @@ Func2::GetattrFF::process(const Branches  &branches_,
       fullpath += fusepath_;
       rv = fs::lstat(fullpath.c_str(),st_);
       if(rv == 0)
-        return 0;
+        {
+          fs::inode::calc(fusepath_,st_);
+          return 0;
+        }
     }
 
   return -ENOENT;
