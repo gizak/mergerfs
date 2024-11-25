@@ -1702,8 +1702,6 @@ fuse_lib_getattr(fuse_req_t             req,
              f->fs->op.getattr(path,&buf,&timeout) :
              f->fs->op.fgetattr(&ffi,&buf,&timeout));
 
-      buf.st_ino = hdr_->nodeid;
-
       free_path(f,hdr_->nodeid,path);
     }
 
