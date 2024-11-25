@@ -16,7 +16,7 @@
 
 #pragma once
 
-#include "func_getattr_ff.hpp"
+#include "func_getattr_combine.hpp"
 
 #include "branches.hpp"
 #include "category.hpp"
@@ -160,7 +160,7 @@ public:
   ConfigBOOL     writeback_cache;
   XAttr          xattr;
 
-  Func2::GetattrFF getattr;
+  Func2::GetattrCombine getattr;
 
 private:
   bool _initialized;
