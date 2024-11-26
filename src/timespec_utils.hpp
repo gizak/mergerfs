@@ -4,7 +4,7 @@ namespace TimeSpec
 {
   static
   inline
-  timespec
+  bool
   is_newer(const timespec &t0_,
            const timespec &t1_)
   {
