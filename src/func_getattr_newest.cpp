@@ -38,6 +38,7 @@ Func2::GetattrNewest::process(const Branches  &branches_,
   if(st_->st_ino == 0)
     return -ENOENT;
 
+  newest_branch->path;
   fs::inode::calc(fusepath_,st_);
 
   return 0;
