@@ -9,14 +9,14 @@ namespace TimeSpec
            const timespec &t1_)
   {
     if(t0_.tv_sec > t1_.tv_sec)
-      return t0_;
+      return true;
     if(t0_.tv_sec == t1_.tv_sec)
       {
         if(t0_.tv_nsec > t1_.tv_nsec)
-          return t0_;
+          return true;
       }
 
-    return t1_;
+    return false;
   }
   
   static
