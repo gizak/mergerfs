@@ -126,7 +126,6 @@ namespace newest
          StrVec               *paths_)
   {
     timespec ts{0,0};
-    time_t newest;
     struct stat st;
     const string *basepath;
     
