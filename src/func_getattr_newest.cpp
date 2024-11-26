@@ -35,7 +35,7 @@ Func2::GetattrNewest::process(const Branches  &branches_,
       newest_branch = &branch;
     }
 
-  if(st_->st_ino == 0)
+  if(newest_branch == nullptr)
     return -ENOENT;
 
   newest_branch->path;
