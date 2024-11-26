@@ -11,7 +11,7 @@ Func2::GetattrNewest::process(const Branches  &branches_,
                               fuse_timeouts_t *timeout_)
 {
   int rv;
-  Branch *newest_branch;
+  const Branch *newest_branch;
   Branches::CPtr branches;
   fs::Path fullpath;
 
