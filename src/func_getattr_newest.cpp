@@ -32,6 +32,7 @@ Func2::GetattrNewest::process(const Branches  &branches_,
         continue;
 
       *st_ = tmp_st;
+      newest_branch = &branch;
     }
 
   if(st_->st_ino == 0)
