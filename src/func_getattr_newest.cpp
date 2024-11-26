@@ -22,7 +22,7 @@ Func2::GetattrNewest::process(const Branches  &branches_,
 
       fullpath = branch.path;
       fullpath += fusepath_;
-      rv = fs::lstat(fullpath.c_str(),&st);
+      rv = fs::lstat(fullpath.c_str(),&tmp_st);
       if(rv == -1)
         continue;
       
