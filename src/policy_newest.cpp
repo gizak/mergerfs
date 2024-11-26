@@ -125,10 +125,11 @@ namespace newest
          const char           *fusepath_,
          StrVec               *paths_)
   {
+    timespec ts{0,0};
     time_t newest;
     struct stat st;
     const string *basepath;
-
+    
     newest = std::numeric_limits<time_t>::min();
     basepath = NULL;
     for(auto &branch : *branches_)
