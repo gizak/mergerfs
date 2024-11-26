@@ -25,17 +25,11 @@ Func2::GetattrNewest::process(const Branches  &branches_,
       rv = fs::lstat(fullpath.c_str(),&tmp_st);
       if(rv == -1)
         continue;
-      
-      if(st_->st_ino == 0)
-        {
-          *st_ = st;
-          continue;
-        }
 
-      st_->st_atim = TimeSpec::newest(st_->st_atim,st.st_atim);
-      st_->st_ctim = TimeSpec::newest(st_->st_ctim,st.st_ctim);
-      st_->st_mtim = TimeSpec::newest(st_->st_mtim,st.st_mtim);
-      st_->st_nlink += st.st_nlink;
+      if(!TimeSpec::is_newer(tmp_st.st_mtim,st_->st_mtim))
+        continue;
+
+      *st_ = st;
     }
 
   if(st_->st_ino == 0)
