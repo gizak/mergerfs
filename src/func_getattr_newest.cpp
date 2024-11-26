@@ -16,7 +16,7 @@ Func2::GetattrNewest::process(const Branches  &branches_,
   fs::Path fullpath;
 
   branches = branches_;
-  newest_branch = std::nullptr;
+  newest_branch = nullptr;
 
   for(const auto &branch : *branches)
     {
