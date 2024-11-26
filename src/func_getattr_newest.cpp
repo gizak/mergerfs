@@ -29,7 +29,7 @@ Func2::GetattrNewest::process(const Branches  &branches_,
       if(!TimeSpec::is_newer(tmp_st.st_mtim,st_->st_mtim))
         continue;
 
-      *st_ = st;
+      *st_ = tmp_st;
     }
 
   if(st_->st_ino == 0)
