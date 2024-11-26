@@ -18,7 +18,7 @@ Func2::GetattrNewest::process(const Branches  &branches_,
 
   for(const auto &branch : *branches)
     {
-      struct stat tmpst;
+      struct stat tmp_st;
 
       fullpath = branch.path;
       fullpath += fusepath_;
