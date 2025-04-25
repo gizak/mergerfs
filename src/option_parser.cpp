@@ -474,7 +474,7 @@ namespace options
     if(cfg->mountpoint->empty())
       errs_->push_back({0,"mountpoint not set"});
 
-    Branches::Impl b;
+    Branches b;
     cfg->branches = b;
 
     check_for_mount_loop(cfg,errs_);
