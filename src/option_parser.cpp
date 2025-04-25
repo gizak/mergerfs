@@ -477,7 +477,15 @@ namespace options
     auto i = cfg->branches->begin();
     while(i != cfg->branches->end())
       {
-        
+        bool is_dir;
+        std::error_code ec;
+
+        is_dir = ghc::filesystem::is_directory(i->path,ec);
+        if(!is_dir)
+          {
+            i = cfg->branches->erase(i);
+            continue;
+          }
       }
 
     check_for_mount_loop(cfg,errs_);
