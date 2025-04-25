@@ -474,6 +474,12 @@ namespace options
     if(cfg->mountpoint->empty())
       errs_->push_back({0,"mountpoint not set"});
 
+    auto i = cfg->branches->begin();
+    while(i != cfg->branches->end())
+      {
+        ++i;
+      }
+
     check_for_mount_loop(cfg,errs_);
 
     set_default_options(args_,cfg);
