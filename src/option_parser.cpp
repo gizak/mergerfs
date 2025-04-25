@@ -486,6 +486,8 @@ namespace options
             i = cfg->branches->erase(i);
             continue;
           }
+
+        ++i;
       }
 
     check_for_mount_loop(cfg,errs_);
