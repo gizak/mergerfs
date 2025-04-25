@@ -474,6 +474,7 @@ namespace options
     if(cfg->mountpoint->empty())
       errs_->push_back({0,"mountpoint not set"});
 
+    auto branches = *cfg->branches;
     auto i = cfg->branches->begin();
     while(i != cfg->branches->end())
       {
