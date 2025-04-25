@@ -483,6 +483,8 @@ namespace options
         is_dir = ghc::filesystem::is_directory(i->path,ec);
         if(!is_dir)
           {
+            syslog_notice("branch path '%s' is not a directory, ignoring",
+                          path.c_str());
             i = cfg->branches->erase(i);
             continue;
           }
