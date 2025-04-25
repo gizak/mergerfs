@@ -475,7 +475,7 @@ namespace options
       errs_->push_back({0,"mountpoint not set"});
 
     Branches b;
-    cfg->branches = b;
+    std::swap(cfg->branches,b);
 
     check_for_mount_loop(cfg,errs_);
 
