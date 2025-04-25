@@ -476,7 +476,7 @@ namespace options
 
     auto branches = *cfg->branches;
     auto i = branches->begin();
-    while(i != cfg->branches->end())
+    while(i != branches->end())
       {
         bool is_dir;
         std::error_code ec;
