@@ -484,7 +484,7 @@ namespace options
         if(!is_dir)
           {
             syslog_notice("branch path '%s' is not a directory, ignoring",
-                          path.c_str());
+                          i->path.c_str());
             i = cfg->branches->erase(i);
             continue;
           }
