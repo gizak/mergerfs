@@ -475,7 +475,7 @@ namespace options
       errs_->push_back({0,"mountpoint not set"});
 
     auto branches = *cfg->branches;
-    auto i = cfg->branches->begin();
+    auto i = branches.begin();
     while(i != cfg->branches->end())
       {
         bool is_dir;
