@@ -483,7 +483,6 @@ namespace options
         is_dir = ghc::filesystem::is_directory(i->path,ec);
         if(!is_dir)
           {
-            
             continue;
           }
 
