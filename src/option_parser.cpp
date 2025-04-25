@@ -474,24 +474,6 @@ namespace options
     if(cfg->mountpoint->empty())
       errs_->push_back({0,"mountpoint not set"});
 
-    auto i = cfg->branches->begin();
-    while(i != cfg->branches->end())
-      {
-        bool is_dir;
-        std::error_code ec;
-
-        is_dir = ghc::filesystem::is_directory(i->path,ec);
-        if(!ec && !is_dir)
-          {
-            syslog_notice("branch path '%s' is not a directory, ignoring",
-                          i->path.c_str());
-            i = cfg->branches->erase(i);
-            continue;
-          }
-
-        ++i;
-      }
-
     check_for_mount_loop(cfg,errs_);
 
     set_default_options(args_,cfg);
