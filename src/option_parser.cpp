@@ -481,7 +481,7 @@ namespace options
         std::error_code ec;
 
         is_dir = ghc::filesystem::is_directory(i->path,ec);
-        if(!is_dir)
+        if(!ec && !is_dir)
           {
             syslog_notice("branch path '%s' is not a directory, ignoring",
                           i->path.c_str());
