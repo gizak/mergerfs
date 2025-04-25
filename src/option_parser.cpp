@@ -475,7 +475,7 @@ namespace options
       errs_->push_back({0,"mountpoint not set"});
 
     auto i = cfg->branches->begin();
-    while(i != branches->end())
+    while(i != cfg->branches->end())
       {
         bool is_dir;
         std::error_code ec;
