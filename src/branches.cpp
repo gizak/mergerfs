@@ -178,13 +178,10 @@ namespace l
   {
     int rv;
     string glob;
-    string branchstr;
     StrVec paths;
     optional<uint64_t> minfreespace;
     Branch branch(branches_->minfreespace());
 
-
-    
     rv = l::parse_branch(str_,&glob,&branch.mode,&minfreespace);
     if(rv < 0)
       return rv;
